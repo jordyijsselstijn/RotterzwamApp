@@ -33,12 +33,12 @@ table {
     border-spacing: 0;
 }
 
+html{
+    font-family: 'Open Sans', sans-serif;
+}
 
 .main-menu{
-
     width:100%;
-
-
 }
 
 #container{
@@ -60,6 +60,5 @@ table {
 
 .item{
     margin-left: 10%;
-
-
 }
+
