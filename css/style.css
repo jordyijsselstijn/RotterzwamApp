@@ -39,8 +39,7 @@ html{
 
 .main-menu{
     width:100%;
-    -moz-border-radius-bottomleft: 0px;
-    -moz-border-radius-bottomright: 0px;
+
 
 }
 
@@ -115,4 +114,9 @@ html{
 
     margin-top:55px;
     margin-bottom: 38px;
+}
+
+.hidden{
+
+    display:none;
 }

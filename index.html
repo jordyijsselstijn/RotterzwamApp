@@ -5,6 +5,10 @@
     <meta name="description" content="Rotterzwam"/>
     <link rel="stylesheet" href="css/semantic.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="javascript/jquery-1.11.1.min.js"></script>
+    <script src="javascript/semantic.js"></script>
+    <script src="javascript/main.js"></script>
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title> RotterZwam logs </title>
 </head>
@@ -15,60 +19,64 @@
 </header>
 
 
-<div id="container">
-    <div class="ui inverted menu main-menu">
-        <a class="item">
-            <i class="home icon"></i> Home
-        </a>
-        <a class="item">
-            <i class="dashboard icon"></i> Fruitruimte 1
-        </a>
-        <a class="item">
-            <i class="dashboard icon"></i> Fruitruimte 2
-        </a>
-    </div>
+<div class="ui segment" id="container">
 
-    <div class="ui three column divided grid">
-        <div class="column">
+    <div id="loader" class="ui active dimmer"><div class="ui large text loader">Loading</div></div>
 
-           <div class="temp module">
-               <div>Temperatuur</div>
-               <img src="images/shroomtemp.png" alt="placeholder">
-               <div class="results" id="result-temp">32 C</div>
-           </div>
-        </div>
-        <div class="column">
+    <div id="content" class="hidden">
 
-
-
-
-
-            <div class="hum module">
-                <div>Luchtvochtigheid</div>
-                <img src="images/shroomhum.png" alt="placeholder">
-                <div class="results" id="result-hum">50%</div>
+            <div class="ui inverted menu main-menu">
+                <a class="item">
+                    <i class="home icon"></i> Home
+                </a>
+                <a class="item">
+                    <i class="dashboard icon"></i> Fruitruimte 1
+                </a>
+                <a class="item">
+                    <i class="dashboard icon"></i> Fruitruimte 2
+                </a>
             </div>
 
-        </div>
-        <div class="column">
+            <div class="ui three column divided grid">
+                <div class="column">
 
-            <div class="graph module">
-                <div>Gemiddelde</div>
-                <img src="images/graph.gif" alt="placeholder">
-                <div class="results" id="result-graph"></div>
+                   <div class="temp module">
+                       <div>Temperatuur</div>
+                       <img src="images/shroomtemp.png" alt="placeholder">
+                       <div class="results" id="result-temp">32 C</div>
+                   </div>
+                </div>
+                <div class="column">
+
+
+
+
+
+                    <div class="hum module">
+                        <div>Luchtvochtigheid</div>
+                        <img src="images/shroomhum.png" alt="placeholder">
+                        <div class="results" id="result-hum">50%</div>
+                    </div>
+
+                </div>
+                <div class="column">
+
+                    <div class="graph module">
+                        <div>Gemiddelde</div>
+                        <img src="images/graph.gif" alt="placeholder">
+                        <div class="results" id="result-graph"></div>
+                    </div>
+
+                </div>
+
             </div>
-
-        </div>
-
     </div>
-
 
 </div>
 
 <footer>
 
 </footer>
-<script src="javascript/semantic.js"></script>
-<script src="javascript/jquery-1.11.1.min.js"></script>
+
 </body>
 </html>
