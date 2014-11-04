@@ -9,6 +9,8 @@ $(document).ready(function(){
 
 
 
+
+
         });
 
         $("#fr1").on("click", function(){
