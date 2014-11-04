@@ -71,8 +71,9 @@ html{
 
 .results{
 
-    font-size: 1.3em;
+    font-size: 2.3em;
     font-weight: 200;
+    padding-top: 10px;
 }
 .module{
 
@@ -122,15 +123,19 @@ html{
 
 #result-temp{
 
-    height:70px;
+    height: 57px;
+    padding-top: 23px;
 }
 
 #result-hum{
 
-    height:70px;
+    height: 57px;
+    padding-top: 23px;
 }
 
 #result-graph{
 
-    height:70px;
+    height: 57px;
+    padding-top: 23px;
+
 }
