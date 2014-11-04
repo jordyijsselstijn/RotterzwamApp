@@ -46,7 +46,7 @@ html{
     width:80%;
     margin-left: 11%;
     border: 1px solid #2C2E30;
-    border-radius: 2px;
+    border-radius: 4px;
     height:500px;
 
 }
@@ -67,11 +67,16 @@ html{
     margin-left: 10%;
 }
 
+.results{
+
+    font-size: 1.3em;
+    font-weight: 200;
+    height:50px;
+}
 .module{
 
     width:100%;
-    height:300px;
-
+    border:1px solid #808080;
 }
 .module div{
 
@@ -81,11 +86,29 @@ html{
     height:30px;
     text-align: center;
     padding-top: 6px ;
-
 }
 .module img{
 
     width:60%;
     margin-left:20%;
 
+}
+
+.graph img{
+
+    width:100%;
+    margin-top: 35px;
+    margin-left: 0;
+}
+
+.hum img{
+
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
+.temp img{
+
+    margin-top:55px;
+    margin-bottom: 38px;
 }
