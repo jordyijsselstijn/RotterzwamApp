@@ -47,7 +47,7 @@ html{
 
     width:80%;
     margin-left: 11%;
-    border: 1px solid #2C2E30;
+    border: 1px solid grey;
     border-radius: 4px;
     height:500px;
 
@@ -73,7 +73,6 @@ html{
 
     font-size: 1.3em;
     font-weight: 200;
-    height:50px;
 }
 .module{
 
@@ -100,14 +99,14 @@ html{
 .graph img{
 
     width:100%;
-    margin-top: 35px;
+    margin-top: 31px;
     margin-left: 0;
 }
 
 .hum img{
 
     margin-top: 38px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
 }
 
 .temp img{
@@ -119,4 +118,19 @@ html{
 .hidden{
 
     display:none;
+}
+
+#result-temp{
+
+    height:70px;
+}
+
+#result-hum{
+
+    height:70px;
+}
+
+#result-graph{
+
+    height:70px;
 }
