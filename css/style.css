@@ -37,7 +37,7 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 
-.main-menu{
+.main-menu {
     width:100%;
 }
 
@@ -75,7 +75,7 @@ html{
 .module div{
 
     width:100%;
-    background-color: black;
+    background-color: #2C2E30;
     color:white;
     height:30px;
     text-align: center;
