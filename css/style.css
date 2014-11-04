@@ -67,3 +67,18 @@ html{
     margin-left: 10%;
 }
 
+.module{
+
+    width:100%
+
+}
+.module div{
+
+    width:100%;
+    background-color: black;
+    color:white;
+    height:30px;
+    text-align: center;
+    padding-top: 6px ;
+
+}
