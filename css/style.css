@@ -81,7 +81,7 @@ html{
     border:1px solid #808080;
     border-radius: 2px;
 }
-.module div{
+.module div:not(.caption){
 
     width:100%;
     background-color: black;
@@ -137,5 +137,24 @@ html{
 
     height: 57px;
     padding-top: 23px;
+
+}
+
+#power{
+    position:absolute;
+    margin-top: -80px;
+    margin-left:80%;
+
+}
+
+.powerStatus{
+
+    height:50px;
+
+}
+
+.caption{
+
+    height:270px;
 
 }

@@ -16,6 +16,7 @@
 <header>
     <div class="top-bar"></div>
     <div id="logo"><img src="images/logoheader7.png" alt="Rotterzwam Logo"></div>
+    <div id="power">Stroom status: <img class="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
 </header>
 
 
@@ -40,9 +41,10 @@
             <div class="ui three column divided grid">
                 <div class="column">
 
-                   <div class="temp module">
+                   <div id="temp-module" class="temp module">
                        <div>Temperatuur</div>
-                       <img src="images/shroomtemp.png" alt="placeholder">
+                       <img id="temp-module-img" src="images/shroomtemp.png" alt="placeholder">
+                       <div id="temp-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
                        <div class="results" id="result-temp">32 C</div>
                    </div>
                 </div>
@@ -52,18 +54,20 @@
 
 
 
-                    <div class="hum module">
+                    <div id="hum-module" class="hum module">
                         <div>Luchtvochtigheid</div>
-                        <img src="images/shroomhum.png" alt="placeholder">
+                        <img id="hum-module-img" src="images/shroomhum.png" alt="placeholder">
+                        <div id="hum-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
                         <div class="results" id="result-hum">50%</div>
                     </div>
 
                 </div>
                 <div class="column">
 
-                    <div class="graph module">
-                        <div>Overzicht</div>
-                        <img src="images/graph.gif" alt="placeholder">
+                    <div id="graph-module" class="graph module">
+                        <div>Overzicht temperatuur</div>
+                        <img id="graph-module-img" src="images/graph.gif" alt="placeholder">
+                        <div id="graph-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
                         <div class="results" id="result-graph"></div>
                     </div>
 
