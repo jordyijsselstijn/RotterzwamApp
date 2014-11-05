@@ -1,15 +1,22 @@
-@media screen and (max-width: 320px){
+@media screen and (max-width: 321px){
 
-#container{
 
-    width:120%;
-    margin-left: 0;
+    #container{
 
-}
+        width:100%;
+        margin-left: 0;
+        height: 424px;
+    }
+
+    #logo {
+        margin-left: 2%;
+        margin-bottom: 25px;
+        width: 247px;
+    }
 
     #logo img{
 
-        width:60%;
+        width:50%;
 
     }
 
@@ -34,22 +41,17 @@
 
     .top-bar {
         height: 40px;
-        width: 126%;
+        width: 100%;
         background-color: #2C2E30;
         margin-bottom: 25px;
     }
 
 
-    .menu{
-        width:80%;
-
-    }
-
     #power{
         position: absolute;
-        margin-top: -63px;
-        margin-left: 71%;
-        width: 170px;
+        margin-top: -57px;
+        margin-left: 53%;
+        width: 147px;
 
     }
 
