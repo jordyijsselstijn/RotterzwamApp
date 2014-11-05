@@ -3,11 +3,15 @@
 <head lang="nl">
     <meta charset="UTF-8">
     <meta name="description" content="Rotterzwam"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/semantic.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/style-tablet.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css"/>
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/semantic.js"></script>
     <script src="javascript/main.js"></script>
+
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title> RotterZwam logs </title>
@@ -38,42 +42,62 @@
                 </a>
             </div>
 
-            <div class="ui three column divided grid">
+
+
+        <!--content grid-->
+            <div id="grid">
+
+
                 <div class="column">
 
                    <div id="temp-module" class="temp module">
                        <div>Temperatuur</div>
+                       <div class="values">
                        <img id="temp-module-img" src="images/shroomtemp.png" alt="placeholder">
                        <div id="temp-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
                        <div class="results" id="result-temp">32 C</div>
+                       </div>
                    </div>
                 </div>
+
+
+
                 <div class="column">
-
-
-
-
 
                     <div id="hum-module" class="hum module">
                         <div>Luchtvochtigheid</div>
-                        <img id="hum-module-img" src="images/shroomhum.png" alt="placeholder">
-                        <div id="hum-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
-                        <div class="results" id="result-hum">50%</div>
+                        <div class="values">
+                            <img id="hum-module-img" src="images/shroomhum.png" alt="placeholder">
+                            <div id="hum-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
+                            <div class="results" id="result-hum">50%</div>
+                        </div>
+
                     </div>
 
                 </div>
+
+
+
                 <div class="column">
 
                     <div id="graph-module" class="graph module">
                         <div>Overzicht temperatuur</div>
-                        <img id="graph-module-img" src="images/graph.gif" alt="placeholder">
-                        <div id="graph-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
-                        <div class="results" id="result-graph"></div>
+                        <div class="values">
+                            <img id="graph-module-img" src="images/graph.gif" alt="placeholder">
+                            <div id="graph-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
+                            <div class="results" id="result-graph"></div>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
+
+
+
+
+
+
     </div>
 
 </div>
@@ -81,6 +105,6 @@
 <footer>
 
 </footer>
-
+<script src="javascript/resize.js"></script>
 </body>
 </html>

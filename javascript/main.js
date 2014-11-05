@@ -1,12 +1,15 @@
 $(document).ready(function(){
 
 
+    //timer for the loading screen
+
         setTimeout(function(){
             $("#loader").removeClass("active");
             $("#content").removeClass("hidden");
         }, 1000) ;
 
 
+    //feature to change the color of the plug for showcase purposes
 
         $("#home").on("click", function(){
 
@@ -30,6 +33,7 @@ $(document).ready(function(){
         });
 
 
+    //loading screen when you change fruitroom.
 
         $("#fr1").on("click", function(){
 
@@ -42,7 +46,7 @@ $(document).ready(function(){
         });
 
 
-
+    //loading screen when you change fruitroom.
 
         $("#fr2").on("click", function(){
 
@@ -55,63 +59,65 @@ $(document).ready(function(){
         });
 
 
+    //Transitions for the modules, so that it shows the captions.
+
     $("#temp-module").hover( function(){
 
-        $("#temp-module-img").transition({
+        $("#temp-module-img").stop(true, true).transition({
 
             animation:'horizontal flip',
-            duration:'0.2s',
+            duration:'0.1s',
             complete:function(){
 
-                $("#temp-capt").removeClass("hidden");
+                $("#temp-capt").stop(true, true).removeClass("hidden");
             }
 
         });
 
     }, function() {
 
-        $("#temp-capt").addClass("hidden");
-        $("#temp-module-img").removeClass("hidden");
+        $("#temp-capt").stop(true, true).addClass("hidden");
+        $("#temp-module-img").stop(true, true).removeClass("hidden");
 
     });
 
     $("#hum-module").hover( function(){
 
-        $("#hum-module-img").transition({
+        $("#hum-module-img").stop(true, true).transition({
 
             animation:'horizontal flip',
-            duration:'0.2s',
+            duration:'0.1s',
             complete:function(){
 
-                $("#hum-capt").removeClass("hidden");
+                $("#hum-capt").stop(true, true).removeClass("hidden");
             }
 
         });
 
     }, function() {
 
-        $("#hum-capt").addClass("hidden");
-        $("#hum-module-img").removeClass("hidden");
+        $("#hum-capt").stop(true, true).addClass("hidden");
+        $("#hum-module-img").stop(true, true).removeClass("hidden");
 
     });
 
     $("#graph-module").hover( function(){
 
-        $("#graph-module-img").transition({
+        $("#graph-module-img").stop(true, true).transition({
 
             animation:'horizontal flip',
-            duration:'0.2s',
+            duration:'0.1s',
             complete:function(){
 
-                $("#graph-capt").removeClass("hidden");
+                $("#graph-capt").stop(true, true).removeClass("hidden");
             }
 
         });
 
     }, function() {
 
-        $("#graph-capt").addClass("hidden");
-        $("#graph-module-img").removeClass("hidden");
+        $("#graph-capt").stop(true, true).addClass("hidden");
+        $("#graph-module-img").stop(true, true).removeClass("hidden");
 
     });
 
