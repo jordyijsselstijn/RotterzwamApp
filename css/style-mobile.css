@@ -1,12 +1,19 @@
-@media screen and (max-width: 321px){
+@media screen and (max-width: 360px){
+
+	.main-menu{
+		
+		width:99%;
+		
+		
+	}
 
 
-    #container{
+    #Container{
 
         width:100%;
         margin-left: 0;
-        height: 1327px;
-        border:0;
+        height: 1427px;
+        border:0px transparent black;
 
 
     }
@@ -36,7 +43,7 @@
         width:100%;
         background-color: black;
         color:white;
-        height:50px;
+        height:30px;
         text-align: center;
         padding-top: 15px ;
     }
@@ -46,8 +53,9 @@
 
         float:none;
         width:100%;
-        /*height:33%;*/
+        
         margin-left: 0;
+        margin-bottom: 5px;
     }
 
 
@@ -65,6 +73,14 @@
         margin-left: 53%;
         width: 147px;
 
+    }
+    .chart{
+    
+    
+		margin-left: 0px;
+		width: 100%;
+		overflow: hidden;
+	    
     }
 
 }

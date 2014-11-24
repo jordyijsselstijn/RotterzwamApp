@@ -23,7 +23,7 @@ function getTemperatureCallback(data)
     console.log(data);
     $.each(data, function (i, val)
     {
-        $(".content").append('<div class="data"><p>' +val.idTemperature+ ' - ' +val.temperature+ ' - ' +val.timeDate+ ' - ' +val.arduinoId_FK+'</p></div>');
+        $("#temp-module").append('<div class="results" id="result-temp">' +val.idTemperature+ ' - ' +val.temperature+ ' - ' +val.timeDate+ ' - ' +val.arduinoId_FK+'</div>');
     });
 
 }
@@ -45,7 +45,7 @@ function getHumidityCallback(data)
     console.log(data);
     $.each(data, function (i, val)
     {
-        $(".content").append('<div class="data"><p>' +val.idHumidity+ ' - ' +val.Humidity+ ' - ' +val.timeDate+ ' - ' +val.arduinoId_FK+'</p></div>');
+        $("#hum-module").append('<div class="results" id="result-hum">' +val.idHumidity+ ' - ' +val.Humidity+ ' - ' +val.timeDate+ ' - ' +val.arduinoId_FK+'</div>');
     });
 
 }

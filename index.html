@@ -3,19 +3,20 @@
 <head lang="nl">
     <meta charset="UTF-8">
     <meta name="description" content="Rotterzwam"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/semantic.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="css/semantic.min.css"/>
     <link rel="stylesheet" href="css/style-desktop.css"/>
     <link rel="stylesheet" href="css/style-tablet.css"/>
     <link rel="stylesheet" href="css/style-mobile.css"/>
-    <script src="javascript/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="javascript/semantic.js"></script>
-    <script src="javascript/main.js"></script>
-    <script src="javascript/resize.js"></script>
-    <script src="javascript/mobile.js"></script>
-
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="javascript/jquery-1.11.1.min.js"></script>
+    <script src="javascript/graphs.js" type="text/javascript"></script>
+    <script src="javascript/semantic.min.js"></script>
+
+    <script src="javascript/main.js"></script>
+
+
     <title> RotterZwam logs </title>
 </head>
 <body>
@@ -26,7 +27,7 @@
 </header>
 
 
-<div class="ui segment" id="container">
+<div class="ui segment" id="Container">
 
     <div id="loader" class="ui active dimmer"><div class="ui large text loader">Gegevens ophalen...</div></div>
 
@@ -50,28 +51,28 @@
             <div id="grid">
 
 
-                <div class="column">
+                <div class="column temperature">
 
                    <div id="temp-module" class="temp module">
-                       <div>Temperatuur</div>
+                       <div style="background-color: #444444;">Temperatuur</div>
 
                        <img id="temp-module-img" src="images/shroomtemp.png" alt="placeholder">
-                       <div id="temp-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
-                       <div class="results" id="result-temp">32 C</div>
+                       <div id="temp-capt" class="caption hidden"></div>
+                       <div class="results" id="result-temp" style="background-color: #c1d045;"></div>
 
                    </div>
                 </div>
 
 
 
-                <div class="column">
+                <div class="column humidity">
 
-                    <div id="hum-module" class="hum module">
-                        <div>Luchtvochtigheid</div>
+                    <div id="hum-module" class="hum module" >
+                        <div style="background-color: #444444;">Luchtvochtigheid</div>
 
                             <img id="hum-module-img" src="images/shroomhum.png" alt="placeholder">
-                            <div id="hum-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
-                            <div class="results" id="result-hum">50%</div>
+                            <div id="hum-capt" class="caption hidden"></div>
+                            <div class="results" id="result-hum" style="background-color: #c1d045;"></div>
 
 
                     </div>
@@ -80,19 +81,16 @@
 
 
 
-                <div class="column">
-
-                    <div id="graph-module" class="graph module">
-                        <div>Overzicht temperatuur</div>
-
-                            <img id="graph-module-img" src="images/graph.gif" alt="placeholder">
-                            <div id="graph-capt" class="caption hidden">Gemeten op 21-2-2014 om 15:00 </div>
-                            <div class="results" id="result-graph"></div>
-
-
-                    </div>
-
+                <div class="column graphic">
+							<div class="chart-module" style="background-color: #444444;">
+							<div style="background-color: #444444;">Overzicht Temperatuur</div>
+							<div class="chart"><div  id="chart_temp" style="background-color: #444444;"></div></div>
+							<div class="chart-footer" style="background-color: #c1d045;"></div>
+							
+							</div>
                 </div>
+                
+
             </div>
 
 

@@ -43,7 +43,7 @@ html{
 
 }
 
-#container{
+#Container{
 
     width: 86%;
     margin-left: 8%;
@@ -77,13 +77,13 @@ html{
 .module{
 
     width:100%;
-    border:1px solid #808080;
+    border:1px solid #E3DEDE;
     border-radius: 2px;
 }
 .module div:not(.caption){
 
     width:100%;
-    background-color: black;
+    background-color: #444444;
     color:white;
     height:30px;
     padding-top: 6px ;
@@ -97,8 +97,8 @@ html{
  /*}*/
 .module img{
 
-    width:60%;
-    margin-left:20%;
+width: 60%;
+margin-left: 0%;
 
 }
 
@@ -112,12 +112,12 @@ html{
 .hum img{
 
     margin-top: 38px;
-    margin-bottom: 36px;
+    margin-bottom: 38px;
 }
 
 .temp img{
 
-    margin-top:55px;
+    margin-top: 39px;
     margin-bottom: 38px;
 }
 
@@ -130,12 +130,14 @@ html{
 
     height: 57px;
     padding-top: 23px;
+    font-size: 1.8em;
 }
 
 #result-hum{
 
     height: 57px;
     padding-top: 23px;
+    font-size: 1.8em;
 }
 
 #result-graph{
@@ -160,11 +162,11 @@ html{
 
 .caption{
 
-    height: 172px;
+    height: 155px;
     padding-top: 100px;
     text-align: center;
     color:white;
-    background-color: grey;
+    background-color: #444444;
 
 }
 
@@ -172,5 +174,60 @@ html{
 
     width:28%;
     float:left;
-    margin-left: 5%;
+    margin-left:8%;
+}
+
+.chart{
+
+	margin-top: 14px;
+	border-left: 1px solid #E3DEDE;
+	border-top: 1px solid #E3DEDE;
+	border-right: 1px solid #E3DEDE;
+	width: 101%;
+	margin-left: -1px;
+	padding-bottom: 18%;
+	position: relative;
+	overflow: hidden;
+	
+	
+}
+.chart-module{
+	
+	border:1px solid #E3DEDE;
+	width:101%;
+	
+}
+
+.column:first-child{
+	
+	margin-left: 0%;
+	
+}
+
+.chart-module{
+	
+	width: 100%;
+    background-color: black;
+    color:white;
+    height:30px;
+    padding-top: 6px ;
+    text-align: center;
+	
+	
+}
+
+.chart-footer{
+	
+	background-color: black;
+	width: 101%;
+	height: 81px;
+	margin-left: -1px;
+	border-left: 1px solid #E3DEDE;
+	border-bottom: 1px solid #E3DEDE;
+	border-right: 1px solid #E3DEDE;
+	
+}
+.grid{
+	
+	width:100%;
 }
