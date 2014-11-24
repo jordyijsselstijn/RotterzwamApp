@@ -1,6 +1,14 @@
 $(document).ready(function(){
 
 
+    $("#admin").on('click', function(){
+
+        $("#login-bar").toggle("slide");
+
+
+    });
+
+
     //timer for the loading screen
 
         setTimeout(function(){
@@ -132,6 +140,7 @@ $(document).ready(function(){
 
 
 
+
 function getTemperatureCallR1(callback)
 {
     $.ajax(
@@ -235,4 +244,8 @@ function getHumidityCallbackR2(data)
     });
 
 }
+
+
+
+
 

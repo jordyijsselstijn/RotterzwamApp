@@ -60,6 +60,29 @@ html{
     margin-bottom: 25px;
 }
 
+.login{
+
+    margin-top: -25px;
+}
+.login form{
+
+    padding-top: 10px;
+    color:white;
+    float: right;
+}
+
+.login form input{
+
+    border-radius: 4px;
+
+}
+
+
+#admin{
+
+    float:right;
+}
+
 #logo{
     margin-left: 11%;
     margin-bottom: 25px;
