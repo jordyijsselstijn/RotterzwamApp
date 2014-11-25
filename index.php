@@ -1,3 +1,8 @@
+<?php
+include("login.php");
+include("logout.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="nl">
@@ -21,18 +26,11 @@
 </head>
 <body>
 <header>
-    <div class="top-bar"><img src="images/key-256.png" alt="admin-key" id="admin" width="25px"></div>
 
-    <div class="login top-bar hidden" id="login-bar">
-        <form action="" method="POST">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            <button type="submit">Login</button>
-
-        </form>
-    </div>
+    <?php
+    include("login_menu.php");
+    include("logout_menu.php");
+    ?>
 
     <div id="logo"><img src="images/logoheader7.png" alt="Rotterzwam Logo"></div>
     <div id="power">Stroom status: <img class="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
@@ -57,7 +55,9 @@
                 </a>
             </div>
 
-
+        <?php
+        include("boundries.php");
+        ?>
 
         <!--desktop grid-->
             <div id="grid">
