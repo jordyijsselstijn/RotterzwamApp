@@ -23,6 +23,34 @@ $room = $_GET["room"];
 $currentMonth = $_GET["month"];
 $unit = $_GET["unit"];
 $echoData = "";
+$boundary = $_GET["boundary"];
+$min_temp = $_GET["min_temp"];
+$max_temp = $_GET["max_temp"];
+$min_hum = $_GET["min_hum"];
+$max_hum = $_GET["max_hum"];
+$min_co = $_GET["min_co"];
+$max_co = $_GET["max_co"];
+
+
+if(isset($min_temp) || isset($max_temp) || isset($min_hum) || isset($max_hum) || isset($min_co) || isset($max_co)) {
+
+    $result=$mysqli->query("UPDATE boundary SET min_temp = $min_temp, max_temp = $max_temp, min_hum = $min_hum,
+                            max_hum = $max_hum, min_co = $min_co, max_co = $max_co WHERE boundary_id = 1");    
+
+}
+
+if(isset($boundary)) {
+
+    $result=$mysqli->query("SELECT * FROM $boundary");    //selecteer alles uit de opgegeven eenheid tabel
+
+    $arr = array();                        //nieuwe array om waardes aan toe te voegen
+
+    while ($rows = $result->fetch_assoc()) {    //een whileloop om door de resulaten van de query te loopen
+        $arr[] = $rows;                        //voegt alle resultaten toe aan de nieuw gemaakte array $arr.
+    }
+
+    $echoData = $arr;
+}
 
 if(isset($room) && empty($currentMonth) && !empty($unit)){
 
