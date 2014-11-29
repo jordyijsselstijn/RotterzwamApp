@@ -17,7 +17,7 @@
                 dataType:"json",
                 async:'false',
                 data: {"room": 2, "unit": "Temperature", "month": "this"},
-                url:"http://rotterzwam.nickderonde.nl/DEV/api_pull_v2.php",
+                url:"api_pull_v2.php",                                  //http://rotterzwam.nickderonde.nl/DEV/ removed for localhost
                 success:callback
             }
         );
@@ -31,7 +31,7 @@
                 dataType:"json",
                 async:'false',
                 data: {"room": 2, "unit": "Humidity", "month": "this"},
-                url:"http://rotterzwam.nickderonde.nl/DEV/api_pull_v2.php",
+                url:"api_pull_v2.php",                                  //http://rotterzwam.nickderonde.nl/DEV/ removed for localhost
                 success:callback
             }
         );

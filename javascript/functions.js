@@ -1,3 +1,16 @@
+function getRoomValues(){
+
+
+
+
+
+
+}
+
+
+
+
+
 
 function getTemperatureCallR1(callback)
 {
@@ -19,8 +32,11 @@ function getTemperatureCallbackR1(data)
         $("#result-temp").html(val.temperature+' °c');
         $("#temp-capt").html('Gemeten om: '  +val.timeDate);
     });
-
 }
+
+
+
+
 
 function getHumidityCallR1(callback)
 {
@@ -44,6 +60,10 @@ function getHumidityCallbackR1(data)
     });
 
 }
+
+
+
+
 
 function getTemperatureCallR2(callback)
 {
