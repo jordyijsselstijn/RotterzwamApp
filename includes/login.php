@@ -9,13 +9,13 @@ if(isset($_POST['login'])) //als de verzendknop is ingedrukt
     $admin_pass = $mysqli->real_escape_string($_POST['password']); //pak het wachtwoord
     
 	
-    $encrypt_name = md5($admin_name);   //md5 beveiligd
-    $encrypt_pass = md5($admin_pass);   //md5 beveiligd
+//    $encrypt_name = md5($admin_name);   //md5 beveiligd
+//    $encrypt_pass = md5($admin_pass);   //md5 beveiligd
     
     //selecteer de data  die gelijk is aan de gebruikersnaam en het wachtwoord
 
     
-    $run=$mysqli->query("SELECT * FROM admin WHERE admin_name='$encrypt_name' AND admin_pass='$encrypt_pass'");
+    $run=$mysqli->query("SELECT * FROM admin WHERE admin_name='$admin_name' AND admin_pass='$admin_pass'");
     
     
 

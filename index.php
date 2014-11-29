@@ -1,6 +1,7 @@
 <?php
-include("login.php");
-include("logout.php");
+include("includes/login.php");
+include("includes/logout.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,17 @@ include("logout.php");
     <link rel="stylesheet" href="css/style-desktop.css"/>
     <link rel="stylesheet" href="css/style-tablet.css"/>
     <link rel="stylesheet" href="css/style-mobile.css"/>
+    <?php
+    if(isset($_SESSION['loggedIn'])){
+
+        echo'<link rel="stylesheet" href="css/admin-panel-styling.css"/>';
+
+
+    }
+
+
+    ?>
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="javascript/jquery-1.11.1.min.js"></script>
@@ -28,14 +40,19 @@ include("logout.php");
 <header>
 
     <?php
-    include("login_menu.php");
-    include("logout_menu.php");
+        include("includes/login_menu.php");
+        include("includes/logout_menu.php");
     ?>
 
     <div id="logo"><img src="images/logoheader7.png" alt="Rotterzwam Logo"></div>
     <div id="power">Stroom status: <img class="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
 </header>
+    <?php
 
+        echo'<p id="error-msg" class="hidden">'; echo $error; echo '</p>';
+
+
+    ?>
 
 <div class="ui segment" id="Container">
 
@@ -53,13 +70,15 @@ include("logout.php");
                 <a id="fr2" class="item">
                     <i  class="dashboard icon"></i> Fruitruimte 2
                 </a>
+                <?php
+                    include ('includes/adminButton.php');
+                ?>
             </div>
+                <?php
+                    include('includes/adminPanel.php');
 
-        <?php
-        include("boundries.php");
-        ?>
+                ?>
 
-        <!--desktop grid-->
             <div id="grid">
 
 

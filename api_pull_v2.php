@@ -15,7 +15,7 @@ dan krijg je de nieuwste row terug van de room en temp
 */
 
 
-include_once"DB_class.php";					//maakt gebruik van de DB_class.php file
+include_once "includes/DB_class.php";					//maakt gebruik van de DB_class.php file
 
 header("content-type:application/json");	//Geeft aan bij de request dat het om een json applicatie gaat
 

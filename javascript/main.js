@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 
+
+
     $("#admin").on('click', function(){
 
         $("#login-bar").toggle("slide");
@@ -8,42 +10,32 @@ $(document).ready(function(){
 
     });
 
+    $("#admin_panel").on("click", function(){
+
+
+        $("#grid").toggleClass("hidden");
+        $("#control-panel").toggleClass("hidden");
+        setTimeout(function(){
+
+            $("#panel-loader").removeClass("active");
+
+
+        },500);
+
+    });
+
+
+
 
     //timer for the loading screen
 
         setTimeout(function(){
             $("#loader").removeClass("active");
             $("#content").removeClass("hidden");
+
             getTemperatureCallR1(getTemperatureCallbackR1);
 			getHumidityCallR1(getHumidityCallbackR1);
         }, 1000) ;
-
-
-    //feature to change the color of the plug for showcase purposes
-
-        $("#home").on("click", function(){
-
-
-
-            if($(".powerStatus").attr("src")=="images/Powerstatus_red.png"){
-
-                $(".powerStatus").attr("src", "images/Powerstatus.png")
-
-                }else if($(".powerStatus").attr("src")=="images/Powerstatus.png"){
-
-                    $(".powerStatus").attr("src", "images/Powerstatus_green.png")
-
-                    }else{
-
-                        $(".powerStatus").attr("src", "images/Powerstatus_red.png");
-
-                    }
-
-
-        });
-        
-        
-          
 
 
     //loading screen when you change fruitroom.
@@ -52,9 +44,10 @@ $(document).ready(function(){
         
         getTemperatureCallR1(getTemperatureCallbackR1);
         getHumidityCallR1(getHumidityCallbackR1);
-
+            $(".item").removeClass("active");
             $("#loader").addClass("active");
             $("#content").addClass("hidden");
+            $(this).addClass('active');
             setTimeout(function(){
                 $("#loader").removeClass("active");
                 $("#content").removeClass("hidden");
@@ -68,10 +61,12 @@ $(document).ready(function(){
         
         getTemperatureCallR2(getTemperatureCallbackR2);
         getHumidityCallR2(getHumidityCallbackR2);
-        
 
+
+            $(".item").removeClass("active");
             $("#loader").addClass("active");
             $("#content").addClass("hidden");
+            $(this).addClass('active');
             setTimeout(function(){
                 $("#loader").removeClass("active");
                 $("#content").removeClass("hidden");
@@ -94,7 +89,7 @@ $(document).ready(function(){
 	            animation:'horizontal flip',
 	            duration:'0.1s',
 	            complete:function(){
-	
+
 	                $("#temp-capt").stop(true, true).removeClass("hidden");
 	            }
 	
