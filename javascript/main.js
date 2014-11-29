@@ -17,6 +17,7 @@ $(document).ready(function(){
 
         setButtonLogic(this, "admin");
         setLoader(1000);
+        getBoundaryCall(getBoundaryCallback());
 
     });
 
@@ -33,7 +34,7 @@ $(document).ready(function(){
     //loading screen, buttonlogic and data loader for fruitroom 2.
 
         $("#fr2").on("click", function(){
-        
+
             loadDataRoom2();
             setButtonLogic(this);
             setLoader(1000);
@@ -97,7 +98,13 @@ $(document).ready(function(){
 	    });
 
 
+    $("#adminSave").on('click', function(){
 
+        updateBoundaryCall();
+        console.log("werkt!");
+
+
+    });
 
 
 

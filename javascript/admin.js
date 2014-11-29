@@ -7,13 +7,16 @@ $(document).ready(function(){
         console.log(data);
         $.each(data, function (i, val)
         {
-            $("#alerts tbody").append("<tr><td>"+val.alertType+"</td><td>"+val.date+"</td></tr>");
+            $("#alerts tbody").append("<tr><td >"+val.alertType+"</td>" +
+                                            "<td>"+val.alertValue+"</td>"+
+                                            "<td>"+val.date+"</td></tr>");
 
         });
 
 
 
     }
+
 
 
 });
