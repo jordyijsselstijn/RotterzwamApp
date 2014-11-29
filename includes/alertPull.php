@@ -5,7 +5,7 @@ include 'DB_class.php';
 
 header("content-type:application/json");
 
-$result=$mysqli->query("SELECT * FROM alerts ORDER BY 'date'");
+$result=$mysqli->query("SELECT * FROM alerts ORDER BY  date DESC");
 
 
 $arr = array();

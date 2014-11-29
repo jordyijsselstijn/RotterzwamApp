@@ -9,7 +9,7 @@ if(isset($_SESSION['loggedIn'])){
 
     <div>Slider1</div>
 
-
+    <div style="overflow: scroll">
     <table class="ui table" id="alerts">
       <tr>
         <th>Notificatie type</th>
@@ -17,7 +17,7 @@ if(isset($_SESSION['loggedIn'])){
       </tr>
 
     </table>
-
+    </div>
 
     <div id="control-panel-buttons"><div class="ui button primary">Save</div><div class="ui button">Discard</div></div>
 
