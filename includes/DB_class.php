@@ -1,7 +1,7 @@
 <?php
 
 $db="Rotterzwam";				//databasenaam
-$db_user="root";			//username van database
+$db_user="root";			    //username van database
 $db_server="localhost";			//servernaam
 $db_pass="mysql";				//server password
 
