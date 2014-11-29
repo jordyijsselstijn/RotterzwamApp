@@ -2,6 +2,6 @@
 
 if (isset($_SESSION['loggedIn']))
 {
-    echo '<div><p>Hier komen de boundries</p></div>';
+    echo '<div id="bound"></div>';
 }
 ?>
