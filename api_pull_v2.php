@@ -35,7 +35,7 @@ $max_co = $_GET["max_co"];
 if(isset($min_temp) || isset($max_temp) || isset($min_hum) || isset($max_hum) || isset($min_co) || isset($max_co)) {
 
     $result=$mysqli->query("UPDATE boundary SET min_temp = $min_temp, max_temp = $max_temp, min_hum = $min_hum,
-                            max_hum = $max_hum, min_co = $min_co, max_co = $max_co WHERE boundary_id = 1");    //selecteer alles uit de opgegeven eenheid tabel
+                            max_hum = $max_hum, min_co = $min_co, max_co = $max_co WHERE boundary_id = 1");    
 
 }
 
