@@ -16,7 +16,25 @@ $(document).ready(function(){
 
 
     }
+    $("#adminDiscard").on('click', function(){
 
+
+        var discard=confirm("Weet je het zeker?");
+
+        if(discard==true){
+
+            loadDataRoom1();
+            setButtonLogic(this);
+            setLoader(1000);
+
+        }else if(discard==false){
+
+
+
+        }
+
+
+    });
 
 
 });

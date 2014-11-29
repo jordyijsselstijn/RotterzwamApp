@@ -49,15 +49,17 @@
         
         chartData.addColumn('string', 'date');
         chartData.addColumn('number', 'temp');
-        
+        chartData.addColumn('number', 'min');
+        chartData.addColumn('number', 'max');
+
+
 
         for(i = 0; i < data.length; i++){
-            chartData.addRow([data[i].timeDate, parseInt(data[i].temperature)]); 
-            
-        }
-        
 
-		
+            chartData.addRow([data[i].timeDate, parseInt(data[i].temperature), 10, 30]);
+
+        }
+
 		var showEvery = parseInt(chartData.getNumberOfRows() /3);
 		
 		var width='100%';
@@ -81,10 +83,6 @@
 		   legend: {position: 'none'},
 		   hAxis: { textPosition: 'none' },
 		   chartArea: {'width': '60%', 'height': '90%', left: '10%'}
-	
-		
-
-
 
         };
 
