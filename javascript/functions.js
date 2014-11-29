@@ -1,16 +1,3 @@
-function getRoomValues(){
-
-
-
-
-
-
-}
-
-
-
-
-
 
 function getTemperatureCallR1(callback)
 {
