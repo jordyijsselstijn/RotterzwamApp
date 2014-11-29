@@ -45,14 +45,6 @@ function getHumidityCallbackR1(data)
 
 }
 
-
-
-
-
-
-
-
-
 function getTemperatureCallR2(callback)
 {
     $.ajax(
@@ -100,27 +92,54 @@ function getHumidityCallbackR2(data)
 }
 
 function loadDataRoom1(){
-
-
     getTemperatureCallR1(getTemperatureCallbackR1);
     getHumidityCallR1(getHumidityCallbackR1);
-
 }
 
 function loadDataRoom2(){
-
     getTemperatureCallR2(getTemperatureCallbackR2);
     getHumidityCallR2(getHumidityCallbackR2);
+}
+
+function setButtonLogic(element, panel){
+
+
+    if(panel=="admin"){
+
+        $(".item").removeClass("active");
+        $("#loader").addClass("active");
+        $("#content").addClass("hidden");
+        $(element).addClass('active');
+        $("#control-panel").removeClass("hidden");
+        $("#grid").addClass("hidden");
+
+    }else{
+        $(".item").removeClass("active");
+        $("#loader").addClass("active");
+        $("#content").addClass("hidden");
+        $(element).addClass('active');
+        $("#control-panel").addClass("hidden");
+        $("#grid").removeClass("hidden");
+    }
+}
+
+function setLoader(timeOut){
+
+
+        setTimeout(function(){
+            $("#loader").removeClass("active");
+            $("#content").removeClass("hidden");
+        }, timeOut) ;
 
 }
 
-function setButtonLogic(element){
+function getAlerts(callback){
 
-    $(".item").removeClass("active");
-    $("#loader").addClass("active");
-    $("#content").addClass("hidden");
-    $(element).addClass('active');
-    $("#control-panel").addClass("hidden");
-    $("#grid").removeClass("hidden");
+    $.ajax({
+        dataType:"json",
+        url:"includes/alertPull.php",
+        success:callback
+    })
 
 }
+

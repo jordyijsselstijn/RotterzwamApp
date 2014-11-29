@@ -11,3 +11,19 @@
 
 
 }
+
+#control-panel{
+
+    width:100%;
+    height:410px;
+    color: black;
+
+}
+
+#control-panel table{
+
+    float: right;
+    width: 570px;
+
+}
+

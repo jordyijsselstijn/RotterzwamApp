@@ -1,66 +1,42 @@
 $(document).ready(function(){
 
+    //loading screen, buttonlogic and data loader for initial startup.
 
+    setTimeout(function(){
+        setLoader(1000);
+        loadDataRoom1();
+    }, 1000) ;
 
-
+    //animations for the login bar
     $("#admin").on('click', function(){
-
         $("#login-bar").toggle("slide");
-
-
     });
+
 
     $("#admin_panel").on('click', function(){
 
-        $(".item").removeClass("active");
-        $(this).addClass("active");
-        $("#grid").addClass("hidden");
-        $("#control-panel").removeClass("hidden");
-
-        setTimeout(function(){
-
-            $("#panel-loader").removeClass("active");
-
-        }, 500);
-
-
-
+        setButtonLogic(this, "admin");
+        setLoader(1000);
 
     });
 
 
-    //timer for the loading screen
-
-        setTimeout(function(){
-            $("#loader").removeClass("active");
-            $("#content").removeClass("hidden");
-            loadDataRoom1();
-        }, 1000) ;
-
-
-    //loading screen when you change fruitroom.
+    //loading screen, buttonlogic and data loader for fruitroom 1.
 
         $("#fr1").on("click", function(){
-
             loadDataRoom1();
             setButtonLogic(this);
-            setTimeout(function(){
-                $("#loader").removeClass("active");
-                $("#content").removeClass("hidden");
-            }, 1000) ;
+            setLoader(1000);
         });
 
 
-    //loading screen when you change fruitroom.
+    //loading screen, buttonlogic and data loader for fruitroom 2.
 
         $("#fr2").on("click", function(){
         
             loadDataRoom2();
             setButtonLogic(this);
-            setTimeout(function(){
-                $("#loader").removeClass("active");
-                $("#content").removeClass("hidden");
-            }, 1000) ;
+            setLoader(1000);
         });
 
 
@@ -119,8 +95,13 @@ $(document).ready(function(){
 	        $("#hum-module-img").stop(true, true).removeClass("hidden");
 	
 	    });
-	    
-	    });
+
+
+
+
+
+
+});
 	
 
 
