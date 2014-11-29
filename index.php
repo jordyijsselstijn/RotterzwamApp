@@ -24,15 +24,13 @@ include("includes/logout.php");
     ?>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/functions.js"></script>
     <script src="javascript/admin.js"></script>
     <script src="javascript/graphs.js" type="text/javascript"></script>
     <script src="javascript/semantic.min.js"></script>
-
     <script src="javascript/main.js"></script>
 
 
@@ -66,10 +64,10 @@ include("includes/logout.php");
                 <a id="home" class="item">
                     <i  class="home icon"></i> Home
                 </a>
-                <a id="fr1" class="item">
+                <a id="fr1" class="item fruitRoom">
                     <i  class="dashboard icon"></i> Fruitruimte 1
                 </a>
-                <a id="fr2" class="item">
+                <a id="fr2" class="item fruitRoom">
                     <i  class="dashboard icon"></i> Fruitruimte 2
                 </a>
                 <?php
