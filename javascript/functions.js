@@ -188,24 +188,14 @@ function alertCallback (data){
     });
 }
 
-
-getBoundaryCall(getBoundaryCallback);
-
-/*Als de update button wordt ingedrukt voer de calls uit(id kan ook worden aangepast naar id van update button boundaries)*/
-$("#update").click(function(){
-    updateBoundaryCall(updateBoundaryCallback);
-});
-
-
-
-function getBoundaryCall()
+function getBoundaryCall(callback)
 {
     $.ajax(
         {
             dataType:"json",
             data: {"boundary": "boundary"},
             url:"api_pull_v2.php",
-            success:getBoundaryCallback()
+            success:callback
         }
     );
 }

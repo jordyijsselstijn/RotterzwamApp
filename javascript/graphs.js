@@ -6,7 +6,8 @@
         getTemperatureCall(getTemperatureCallback);
         getHumidityCall(getHumidityCallback);
     });
-    
+
+
     
 
     //Ajax call naar de php api
@@ -16,7 +17,7 @@
             {
                 dataType:"json",
                 async:'false',
-                data: {"room": 2, "unit": "Temperature", "month": "this"},
+                data: {"boundary":"boundary", "unit": "Temperature", "room": 1},
                 url:"api_pull_v2.php",                                  //http://rotterzwam.nickderonde.nl/DEV/ removed for localhost
                 success:callback
             }
@@ -30,7 +31,7 @@
             {
                 dataType:"json",
                 async:'false',
-                data: {"room": 2, "unit": "Humidity", "month": "this"},
+                data: {"boundary":"boundary", "unit": "Temperature", "room": 1},
                 url:"api_pull_v2.php",                                  //http://rotterzwam.nickderonde.nl/DEV/ removed for localhost
                 success:callback
             }
@@ -44,6 +45,7 @@
     //Deze functie rendert ook meteen de google chart
     function getTemperatureCallback(data)
     {
+        console.log(data);
 
         var chartData = new google.visualization.DataTable();
         
@@ -56,7 +58,7 @@
 
         for(i = 0; i < data.length; i++){
 
-            chartData.addRow([data[i].timeDate, parseInt(data[i].temperature), 10, 30]);
+            chartData.addRow([data[i].timeDate, parseInt(data[i].temperature), parseInt(data[i].min_temp), parseInt(data[i].max_temp)]);
 
         }
 

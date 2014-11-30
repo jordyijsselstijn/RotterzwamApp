@@ -5,7 +5,7 @@ $(document).ready(function(){
     setTimeout(function(){
         setLoader(1000);
         loadDataRoom1();
-        getBoundaryCall();
+
     }, 1000) ;
 
     $("#admin").on('click', function(){
@@ -32,19 +32,16 @@ $(document).ready(function(){
             .modal('show')
     }
 
-
+    //admin button logic.
     $("#admin_panel").on('click', function(){
-
         setButtonLogic(this, "admin");
         setLoader(500);
         getAlerts(alertCallback);
-        getBoundaryCall(getBoundaryCallback());
-
+        getBoundaryCall(getBoundaryCallback);
     });
 
 
     //loading screen, buttonlogic and data loader for fruitroom 1.
-
         $("#fr1").on("click", function(){
             loadDataRoom1();
             setButtonLogic(this);
@@ -53,7 +50,6 @@ $(document).ready(function(){
 
 
     //loading screen, buttonlogic and data loader for fruitroom 2.
-
         $("#fr2").on("click", function(){
 
             loadDataRoom2();
@@ -62,12 +58,33 @@ $(document).ready(function(){
         });
 
 
-    //Transitions for the modules, so that it shows the captions.
+    //Admin savebutton so it calls the update function in the functions.js file
     $("#adminSave").on('click', function(){
 
         updateBoundaryCall();
         console.log("werkt!");
 
+    });
+
+    $("#adminDiscard").on('click', function(){
+
+        $('.basic.modal')
+            .modal('show')
+        ;
+        $("#confirmNo").on('click', function(){
+
+            $('.basic.modal')
+                .modal('hide')
+            ;
+        });
+        $("#confirmYes").on('click', function(){
+            $('.basic.modal')
+                .modal('hide')
+            ;
+            loadDataRoom1();
+            setButtonLogic("#fr1");
+            setLoader(1000);
+        });
     });
 
 });
