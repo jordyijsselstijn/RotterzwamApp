@@ -35,18 +35,35 @@ table {
 
 html{
     font-family: 'Open Sans', sans-serif;
+
 }
 
-.main-menu{
+.ui.menu{
     width:100%;
+    margin:1rem -17px;
 
+}
 
+.ui.green.button{
+
+    background-color: #c1d045;
+
+}
+
+.ui.green.button:hover{
+
+    background-color: saddlebrown;
+
+}
+
+.ui.menu:first-child {
+    margin-top: -17px;
 }
 
 #Container{
 
-    width: 86%;
-    margin-left: 8%;
+    width: 95%;
+    margin-left: 2%;
     border: 1px solid grey;
     border-radius: 4px;
     height:500px;
@@ -75,6 +92,35 @@ html{
 
     border-radius: 4px;
 
+}
+
+#logOut{
+
+    float:right;
+    margin-right: 10px;
+
+}
+
+#logOut i{
+
+    margin-left: 8px;
+}
+#logOut button{
+
+    height:35px;
+    background-color: #2C2E30;
+    color:white;
+}
+#error-modal {
+
+    color: red;
+    height: 20%;
+    width: 50%;
+}
+#error-modal p{
+
+    margin-left: 20%;
+    margin-top: 50px;
 }
 
 
@@ -197,18 +243,18 @@ margin-left: 0%;
 
     width:28%;
     float:left;
-    margin-left:8%;
+    margin-left:1%;
 }
 
 .chart{
 
-	margin-top: 14px;
+	margin-top: 15px;
 	border-left: 1px solid #E3DEDE;
 	border-top: 1px solid #E3DEDE;
 	border-right: 1px solid #E3DEDE;
 	width: 101%;
 	margin-left: -1px;
-	padding-bottom: 18%;
+	padding-bottom: 26%;
 	position: relative;
 	overflow: hidden;
 	

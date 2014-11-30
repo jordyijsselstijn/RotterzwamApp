@@ -49,8 +49,8 @@
         
         chartData.addColumn('string', 'date');
         chartData.addColumn('number', 'temp');
-        chartData.addColumn('number', 'min');
-        chartData.addColumn('number', 'max');
+        chartData.addColumn('number', 'min');       //lijn voor minimum
+        chartData.addColumn('number', 'max');       //lijn voor maximum
 
 
 
@@ -61,28 +61,17 @@
         }
 
 		var showEvery = parseInt(chartData.getNumberOfRows() /3);
-		
+
 		var width='100%';
-		
-		if($(window).innerWidth()<361){
-			
-			width='80%';
-			console.log(width);
-			
-		}else{
-			
-			width='100%';
-			console.log(width);
-			
-		}
+
 		
 		var options = {
             
            height: '100%',
 		   width: width,
-		   legend: {position: 'none'},
+		   legend: {position: 'bottom'},
 		   hAxis: { textPosition: 'none' },
-		   chartArea: {'width': '60%', 'height': '90%', left: '10%'}
+		   chartArea: {'width': '70%', 'height': '100%', left: '10%', top:'10%'}
 
         };
 

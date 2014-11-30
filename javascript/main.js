@@ -7,10 +7,21 @@ $(document).ready(function(){
         loadDataRoom1();
     }, 1000) ;
 
-    //animations for the login bar
     $("#admin").on('click', function(){
-        $("#login-bar").toggle("slide");
+
+        $("#login-modal")
+            .modal('setting', 'closable', false)
+            .modal('show')
+        ;
     });
+
+    var loginError= $("#error-modal p").html();
+
+    if(loginError!=""){
+
+        $("#error-modal")
+            .modal('show')
+    }
 
 
     $("#admin_panel").on('click', function(){
@@ -43,59 +54,9 @@ $(document).ready(function(){
 
     //Transitions for the modules, so that it shows the captions.
 
-    $("#temp-module").hover( function(){
-    
-    if($(window).innerWidth()<768){
-	    
-	    
-	    
-    }else{
-	    
-		        $("#temp-module-img").stop(true, true).transition({
-	
-	            animation:'horizontal flip',
-	            duration:'0.1s',
-	            complete:function(){
 
-	                $("#temp-capt").stop(true, true).removeClass("hidden");
-	            }
-	
-	        });
-	
-	    }}, function() {
-	
-	        $("#temp-capt").stop(true, true).addClass("hidden");
-	        $("#temp-module-img").stop(true, true).removeClass("hidden");
-	
-	    });
-    	
-    
-	$("#hum-module").hover( function(){
-	
-	if($(window).innerWidth()<768){
-	    
-	    
-	    
-    }else{
 
-	
-	        $("#hum-module-img").stop(true, true).transition({
-	
-	            animation:'horizontal flip',
-	            duration:'0.1s',
-	            complete:function(){
-	
-	                $("#hum-capt").stop(true, true).removeClass("hidden");
-	            }
-	
-	        });
-	
-	    }}, function() {
-	
-	        $("#hum-capt").stop(true, true).addClass("hidden");
-	        $("#hum-module-img").stop(true, true).removeClass("hidden");
-	
-	    });
+
 
 
     $("#adminSave").on('click', function(){

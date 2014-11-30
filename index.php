@@ -10,19 +10,12 @@ include("includes/logout.php");
     <meta charset="UTF-8">
     <meta name="description" content="Rotterzwam"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="stylesheet" href="css/semantic.min.css"/>
     <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/semantic.min.css"/>
+
     <link rel="stylesheet" href="css/style-tablet.css"/>
     <link rel="stylesheet" href="css/style-mobile.css"/>
-    <?php
-    if(isset($_SESSION['loggedIn'])){
-
-        echo'<link rel="stylesheet" href="css/admin-panel-styling.css"/>';
-
-    }
-
-    ?>
-
+    <link rel="stylesheet" href="css/admin-panel-styling.css"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -39,24 +32,55 @@ include("includes/logout.php");
 <body>
 <header>
 
-    <?php
-        include("includes/login_menu.php");
-        include("includes/logout_menu.php");
-    ?>
+    <div class="top-bar">
 
+        <?php
+        if(isset($_SESSION['loggedIn'])){
+            echo'    <form action="" method="POST" id="logOut">
+                        <button type="submit" name="logout">Logout  <i class="sign out inverted icon"></i></button>
+                        </form>';
+        }else{
+            echo'<img src="images/key-256.png" alt="admin-key" id="admin" width="25px">';
+        }
+        ?>
+
+
+    </div>
     <div id="logo"><img src="images/logoheader7.png" alt="Rotterzwam Logo"></div>
     <div id="power">Stroom status: <img class="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
 </header>
-    <?php
-
-        echo'<p id="error-msg" class="hidden">'; echo $error; echo '</p>';
 
 
-    ?>
+
+
+<div class="ui small modal" id="login-modal">
+    <i class="close icon"></i>
+    <form class="ui form segment" action="" method="POST">
+        <div class="ui field">
+        <label for="username">Username</label>
+        <div class="ui input">
+            <input type="text" placeholder="Username" id="username" name="username" required="required">
+        </div>
+        </div>
+
+        <div class="ui field">
+        <label for="password">Password</label>
+        <div class="ui input">
+            <input type="Password" placeholder="Password" id="password" name="password" required="required">
+        </div>
+        </div>
+        <button class="ui button green primary" type="submit" name="login" style="background-color: #c1d045;">Login</button>
+    </form>
+</div>
+<div id="error-modal" class="ui small modal"><i class="close icon"></i><p><?php echo $error; ?></p></div>
+
+
 
 <div class="ui segment" id="Container">
 
-    <div id="loader" class="ui active dimmer"><div class="ui large text loader">Gegevens ophalen...</div></div>
+    <div id="loader" class="ui inverted active dimmer"><div class="ui large text loader">Gegevens ophalen...</div></div>
+
+
 
     <div id="content" class="hidden">
 
@@ -79,38 +103,24 @@ include("includes/logout.php");
 
                 ?>
 
+
+
             <div id="grid">
-
-
-                <div class="column temperature">
-
+                <div class="column temperature ui">
                    <div id="temp-module" class="temp module">
                        <div style="background-color: #444444;">Temperatuur</div>
-
                        <img id="temp-module-img" src="images/shroomtemp.png" alt="placeholder">
-                       <div id="temp-capt" class="caption hidden"></div>
                        <div class="results" id="result-temp" style="background-color: #c1d045;"></div>
-
                    </div>
                 </div>
 
-
-
-                <div class="column humidity">
-
+                <div class="column humidity ui">
                     <div id="hum-module" class="hum module" >
                         <div style="background-color: #444444;">Luchtvochtigheid</div>
-
                             <img id="hum-module-img" src="images/shroomhum.png" alt="placeholder">
-                            <div id="hum-capt" class="caption hidden"></div>
                             <div class="results" id="result-hum" style="background-color: #c1d045;"></div>
-
-
                     </div>
-
                 </div>
-
-
 
                 <div class="column graphic">
 							<div class="chart-module" style="background-color: #444444;">
@@ -120,21 +130,9 @@ include("includes/logout.php");
 							
 							</div>
                 </div>
-                
-
             </div>
-
-
-
-
-
     </div>
-
 </div>
-
-<footer>
-
-</footer>
 
 </body>
 </html>

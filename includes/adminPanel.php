@@ -9,7 +9,7 @@ if(isset($_SESSION['loggedIn'])){
 
     <div>Slider1</div>
 
-    <div style="overflow: scroll">
+
     <table class="ui table" id="alerts">
       <tr>
         <th>Notificatie type</th>
@@ -19,17 +19,34 @@ if(isset($_SESSION['loggedIn'])){
       </tr>
 
     </table>
-    </div>
 
-    <div id="control-panel-buttons"><div class="ui button primary" id="adminSave">Bewaren</div><div class="ui button" id="adminDiscard">Ongedaan maken</div></div>
+    <div id="control-panel-buttons"><div class="ui button green primary" id="adminSave">Bewaren</div><div class="ui button" id="adminDiscard">Ongedaan maken</div></div>
 
     </div>
 
     ';
 
-}else{
 
-    echo 'you will have to log in to see this part!';
+    echo'
+
+    <div class="ui basic modal">
+
+    <div>Weet u zeker dat u de wijzigingen niet wilt opslaan?</div>
+    <br>
+        <div class="ui button green primary" id="confirmYes">Ja</div>
+        <div class="ui button" id="confirmNo">Nee</div>
+
+
+
+
+    </div>
+
+
+
+
+
+    ';
+
 
 
 }

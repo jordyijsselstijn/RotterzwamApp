@@ -17,7 +17,13 @@ function getTemperatureCallbackR1(data)
     $.each(data, function (i, val)
     {
         $("#result-temp").html(val.temperature+' °c');
-        $("#temp-capt").html('Gemeten om: '  +val.timeDate);
+        $('.temperature')
+            .popup({
+                title   : 'Gemeten op',
+                content : val.timeDate
+            })
+        ;
+
     });
 }
 
@@ -43,7 +49,12 @@ function getHumidityCallbackR1(data)
     $.each(data, function (i, val)
     {
         $("#result-hum").html(val.humidity+' %');
-        $("#hum-capt").html('Gemeten om: '  +val.timeDate);
+        $('.humidity')
+            .popup({
+                title   : 'Gemeten op',
+                content : val.timeDate
+            })
+        ;
     });
 
 }
@@ -70,7 +81,12 @@ function getTemperatureCallbackR2(data)
     $.each(data, function (i, val)
     {
         $("#result-temp").html(val.temperature+' °c');
-        $("#temp-capt").html('Gemeten om: '  +val.timeDate);
+        $('.temperature')
+            .popup({
+                title   : 'Gemeten op',
+                content : val.timeDate
+            })
+        ;
     });
 
 }
@@ -93,7 +109,12 @@ function getHumidityCallbackR2(data)
     $.each(data, function (i, val)
     {
         $("#result-hum").html(val.humidity+' %');
-        $("#hum-capt").html('Gemeten om: '  +val.timeDate);
+        $('.humidity')
+            .popup({
+                title   : 'Gemeten op',
+                content : val.timeDate
+            })
+        ;
     });
 
 }

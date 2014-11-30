@@ -19,19 +19,25 @@ $(document).ready(function(){
     $("#adminDiscard").on('click', function(){
 
 
-        var discard=confirm("Weet je het zeker?");
+        $('.basic.modal')
+            .modal('show')
+        ;
 
-        if(discard==true){
+        $("#confirmNo").on('click', function(){
 
+            $('.basic.modal')
+                .modal('hide')
+            ;
+        });
+        $("#confirmYes").on('click', function(){
+            $('.basic.modal')
+                .modal('hide')
+            ;
             loadDataRoom1();
-            setButtonLogic(this);
+            setButtonLogic("#fr1");
             setLoader(1000);
 
-        }else if(discard==false){
-
-
-
-        }
+        });
 
 
     });
