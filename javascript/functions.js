@@ -209,26 +209,23 @@ function getBoundaryCallback(data)
 }
 
 
-function updateBoundaryCall()
+function updateBoundaryCall(callback)
 {
     /*Haalt de waardes van de boundaries uit de formtabels (naam van de id's kunnen worden aangepast naar de namen van de id's)*/
-    var minTemp = $("#min-temp").val();
-    var maxTemp = $("#max-temp").val();
-    var minHum = $("#min-hum").val();
-    var maxHum = $("#max-hum").val();
-//    var minCo = $("#min-co").val();, "min_co": minCo, "max_co": maxCo
-//    var maxCo = $("#max-co").val();
+    var minTemp = $(".input1").val();
+    var maxTemp = $(".input2").val();
+    var minHum = $(".input3").val();
+    var maxHum = $(".input4").val();
 
     $.ajax(
         {
             dataType:"json",
             data: {"min_temp": minTemp, "max_temp": maxTemp, "min_hum": minHum, "max_hum": maxHum},
             url:"api_pull_v2.php",
-            success:updateBoundaryCallback(data)
+            success:callback
         }
     );
 }
-
 
 function updateBoundaryCallback(data)
 {

@@ -61,8 +61,8 @@ $(document).ready(function(){
     //Admin savebutton so it calls the update function in the functions.js file
     $("#adminSave").on('click', function(){
 
-        updateBoundaryCall();
-        console.log("werkt!");
+        updateBoundaryCall(updateBoundaryCallback);
+
 
     });
 

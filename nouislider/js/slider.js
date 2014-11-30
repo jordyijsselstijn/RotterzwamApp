@@ -33,6 +33,11 @@ $("#valueTemp").Link('upper').to($(".input2"), null, wNumb({
     postfix: ''
 }));
 
+
+
+
+
+
 $("#valueHum").noUiSlider({
     start: [ 65, 95 ],
     range: {
@@ -55,7 +60,7 @@ $("#valueHum").Link('lower').to($(".input3"), null, wNumb({
     prefix: '',
     // Write the value without decimals
     decimals: 0,
-    postfix: '%'
+    postfix: ''
 }));
 
 // Any selector is acceptable, so we'll
@@ -65,24 +70,24 @@ $("#valueHum").Link('upper').to($(".input4"), null, wNumb({
     prefix: '',
     // Write the value without decimals
     decimals: 0,
-    postfix: '%'
+    postfix: ''
 }));
 
 
-//function setText( value, handleElement, slider ){
-//    $("#someElement").text( value );
-//}
-//
-//// Link accepts functions too.
-//// The arguments are the slider value,
-//// the .noUi-handle element and the slider instance.
-//$("#rangeSlider").Link('upper').to(setText);
-//
-//// When you pass a string to a link,
-//// it will create a hidden input.
-//// You'll see the value appear when you
-//// alert the form contents.
-//$("#rangeSlider").Link('upper').to("inputName");
+function setText( value, handleElement, slider ){
+    $("#someElement").text( value );
+}
+
+// Link accepts functions too.
+// The arguments are the slider value,
+// the .noUi-handle element and the slider instance.
+$("#rangeSlider").Link('upper').to(setText);
+
+// When you pass a string to a link,
+// it will create a hidden input.
+// You'll see the value appear when you
+// alert the form contents.
+$("#rangeSlider").Link('upper').to("inputName");
 
 
 $('button').click(function(){

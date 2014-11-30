@@ -10,14 +10,13 @@ include("includes/logout.php");
     <meta charset="UTF-8">
     <meta name="description" content="Rotterzwam"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
     <link rel="stylesheet" href="css/style-desktop.css"/>
     <link rel="stylesheet" href="css/semantic.min.css"/>
-
     <link rel="stylesheet" href="css/style-tablet.css"/>
     <link rel="stylesheet" href="css/style-mobile.css"/>
     <link rel="stylesheet" href="css/admin-panel-styling.css"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="nouislider/style/jquery.nouislider.css" type="text/css"/>
     <link rel="stylesheet" href="nouislider/style/jquery.nouislider.pips.css" type="text/css"/>
 
