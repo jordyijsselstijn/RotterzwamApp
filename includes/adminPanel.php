@@ -14,7 +14,6 @@ if(isset($_SESSION['loggedIn'])){
       <tr>
         <th>Notificatie type</th>
         <th>Gemeten waarde</th>
-        <th>Datum</th>
 
       </tr>
 

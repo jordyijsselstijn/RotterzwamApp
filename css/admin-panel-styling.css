@@ -24,8 +24,12 @@
 #control-panel table{
 
     float: right;
-    width: 570px;
+    width: 30%;
 
 }
 
+#alerts{
 
+    display:table;
+
+}
