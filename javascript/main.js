@@ -5,6 +5,7 @@ $(document).ready(function(){
     setTimeout(function(){
         setLoader(1000);
         loadDataRoom1();
+        getBoundaryCall();
     }, 1000) ;
 
     $("#admin").on('click', function(){

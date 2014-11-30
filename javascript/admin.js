@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+
+
+
     getAlerts(alertCallback);
 
     function alertCallback (data){

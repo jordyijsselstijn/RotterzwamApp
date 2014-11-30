@@ -196,10 +196,7 @@ function getBoundaryCall()
 function getBoundaryCallback(data)
 {
     console.log(data);
-    $.each(data, function (i, val)
-    {
-        $("#bound").append('<div class="result">' +val.min_temp+ ' - ' +val.max_temp+ ' - ' +val.min_hum+ ' - ' +val.max_hum+ ' - ' +val.min_co+ ' - ' +val.max_co+ '</div>');
-    });
+
 
 }
 
@@ -211,13 +208,13 @@ function updateBoundaryCall()
     var maxTemp = $("#max-temp").val();
     var minHum = $("#min-hum").val();
     var maxHum = $("#max-hum").val();
-    var minCo = $("#min-co").val();
-    var maxCo = $("#max-co").val();
+//    var minCo = $("#min-co").val();, "min_co": minCo, "max_co": maxCo
+//    var maxCo = $("#max-co").val();
 
     $.ajax(
         {
             dataType:"json",
-            data: {"min_temp": minTemp, "max_temp": maxTemp, "min_hum": minHum, "max_hum": maxHum, "min_co": minCo, "max_co": maxCo},
+            data: {"min_temp": minTemp, "max_temp": maxTemp, "min_hum": minHum, "max_hum": maxHum},
             url:"api_pull_v2.php",
             success:updateBoundaryCallback(data)
         }

@@ -1,8 +1,11 @@
 #control-panel-buttons{
 
-    margin-top: 358px;
-    margin-left: 68%;
-    height: 100px;
+    height: 44px;
+    width: 362px;
+    float: left;
+    clear: both;
+    margin-top: 135px;
+
 
 }
 
@@ -24,12 +27,21 @@
 #control-panel table{
 
     float: right;
-    width: 30%;
+    width: 50%;
 
 }
 
 #alerts{
 
     display:table;
+    margin-top: -55px;
+
+}
+
+.valueSlider{
+
+    width:45%;
+    float:left;
+    clear:both;
 
 }

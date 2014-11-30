@@ -7,7 +7,16 @@ if(isset($_SESSION['loggedIn'])){
 
     <div id="control-panel" class="hidden">
 
-    <div>Slider1</div>
+    <div class="ui segment valueSlider">Temperature
+    <input type="hidden" id="min-temp">
+    <input type="hidden" id="max-temp">
+
+    </div>
+    <div class="ui segment valueSlider">Humidity
+    <input type="hidden" id="min-hum">
+    <input type="hidden" id="max-hum">
+
+    </div>
 
 
     <table class="ui table" id="alerts">
