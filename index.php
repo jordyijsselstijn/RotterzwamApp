@@ -24,7 +24,6 @@ include("includes/logout.php");
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/functions.js"></script>
-    <script src="javascript/admin.js"></script>
     <script src="javascript/graphs.js" type="text/javascript"></script>
     <script src="javascript/semantic.min.js"></script>
     <script src="javascript/main.js"></script>

@@ -12,12 +12,14 @@ if(isset($_SESSION['loggedIn'])){
         <form action="" id="sliderForm">
             <div  id="rangeSliderTemp"></div>
             <div id="valueTemp">
-                <label for="min">Minimaal</label>
+            </div>
+            <p>                <label for="min">Minimaal</label>
                 <input type="text" class="input1" id="min-temp" name="one"/>
 
                 <label for="max">Maximaal</label>
-                <input type="text" class="input2" id="max-temp" name="two"/>
-            </div>
+                <input type="text" class="input2" id="max-temp" name="two"/></p>
+
+
         </form>
 
     </div>
@@ -27,12 +29,13 @@ if(isset($_SESSION['loggedIn'])){
             <form action="" id="sliderHum">
             <div  id="rangeSliderHum"></div>
             <div id="valueHum">
-                <label for="min">Minimaal</label>
+            </div>
+            <p><label for="min">Minimaal</label>
                 <input type="text" class="input3" id="min-hum" name="three"/>
 
                 <label for="max">Maximaal</label>
                 <input type="text" class="input4" id="max-hum" name="four"/>
-            </div>
+            </p>
         </form>
 
 
