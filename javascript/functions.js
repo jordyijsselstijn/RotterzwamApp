@@ -171,6 +171,24 @@ function getAlerts(callback){
 
 }
 
+function alertCallback (data){
+    console.log(data);
+    $.each(data, function (i, val)
+    {
+        $("#alerts tbody").append("<tr id="+val.id+"><td >"+val.alertType+"</td>" +
+            "<td>"+val.alertValue+"</td>"
+        );
+
+        $("#"+val.id).popup({
+
+            title:'Datum',
+            content:val.date
+
+        });
+    });
+}
+
+
 getBoundaryCall(getBoundaryCallback);
 
 /*Als de update button wordt ingedrukt voer de calls uit(id kan ook worden aangepast naar id van update button boundaries)*/

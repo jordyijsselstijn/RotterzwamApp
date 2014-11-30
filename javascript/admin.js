@@ -4,26 +4,6 @@ $(document).ready(function(){
 
 
 
-    getAlerts(alertCallback);
-
-    function alertCallback (data){
-        console.log(data);
-        $.each(data, function (i, val)
-        {
-            $("#alerts tbody").append("<tr id="+val.id+"><td >"+val.alertType+"</td>" +
-                                            "<td>"+val.alertValue+"</td>"
-                                            );
-
-            $("#"+val.id).popup({
-
-                title:'Datum',
-                content:val.date
-
-            });
-        });
-    }
-
-
 
 
     $("#adminDiscard").on('click', function(){

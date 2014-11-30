@@ -37,6 +37,7 @@ $(document).ready(function(){
 
         setButtonLogic(this, "admin");
         setLoader(500);
+        getAlerts(alertCallback);
         getBoundaryCall(getBoundaryCallback());
 
     });
