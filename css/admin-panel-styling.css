@@ -4,7 +4,6 @@
     width: 362px;
     float: left;
     clear: both;
-    margin-top: 135px;
 
 
 }
@@ -27,6 +26,7 @@
 
     float: right;
     width: 50%;
+    margin-top: -145px;
 
 }
 
@@ -44,4 +44,8 @@
     float:left;
     clear:both;
 
+}
+
+.noUi-base {
+    margin-top: 15px;
 }

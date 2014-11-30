@@ -7,7 +7,7 @@ if(isset($_SESSION['loggedIn'])){
 
     <div id="control-panel" class="hidden">
 
-    <div class="ui segment valueSlider">Temperature
+    <div class="ui segment valueSlider">Temperatuur
 
         <form action="" id="sliderForm">
             <div  id="rangeSliderTemp"></div>
@@ -22,7 +22,7 @@ if(isset($_SESSION['loggedIn'])){
 
     </div>
 
-    <div class="ui segment valueSlider">Humidity
+    <div class="ui segment valueSlider">Luchtvochtigheid
 
             <form action="" id="sliderHum">
             <div  id="rangeSliderHum"></div>
