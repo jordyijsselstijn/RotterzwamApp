@@ -16,6 +16,9 @@ if(isset($_SESSION['loggedIn'])){
     <input type="hidden" id="min-hum">
     <input type="hidden" id="max-hum">
 
+
+
+
     </div>
 
 
