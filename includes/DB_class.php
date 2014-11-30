@@ -3,7 +3,7 @@
 $db="Rotterzwam";				//databasenaam
 $db_user="root";			    //username van database
 $db_server="localhost";			//servernaam
-$db_pass="mysql";				//server password
+$db_pass="root";				//server password
 
 $mysqli = new mysqli($db_server, $db_user, $db_pass, $db);		//connectie string
 

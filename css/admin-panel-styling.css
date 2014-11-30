@@ -13,7 +13,6 @@
 
     margin-right: 10px;
 
-
 }
 
 #control-panel{
@@ -40,7 +39,8 @@
 
 .valueSlider{
 
-    width:45%;
+    width:40%;
+    height: 150px;
     float:left;
     clear:both;
 

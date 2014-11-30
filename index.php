@@ -18,6 +18,9 @@ include("includes/logout.php");
     <link rel="stylesheet" href="css/admin-panel-styling.css"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="nouislider/style/jquery.nouislider.css" type="text/css"/>
+    <link rel="stylesheet" href="nouislider/style/jquery.nouislider.pips.css" type="text/css"/>
+
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/functions.js"></script>

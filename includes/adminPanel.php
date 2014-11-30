@@ -8,13 +8,32 @@ if(isset($_SESSION['loggedIn'])){
     <div id="control-panel" class="hidden">
 
     <div class="ui segment valueSlider">Temperature
-    <input type="hidden" id="min-temp">
-    <input type="hidden" id="max-temp">
+
+        <form action="" id="sliderForm">
+            <div  id="rangeSliderTemp"></div>
+            <div id="valueTemp">
+                <label for="min">Minimaal</label>
+                <input type="text" class="input1" id="min-temp" name="one"/>
+
+                <label for="max">Maximaal</label>
+                <input type="text" class="input2" id="max-temp" name="two"/>
+            </div>
+        </form>
 
     </div>
+
     <div class="ui segment valueSlider">Humidity
-    <input type="hidden" id="min-hum">
-    <input type="hidden" id="max-hum">
+
+            <form action="" id="sliderHum">
+            <div  id="rangeSliderHum"></div>
+            <div id="valueHum">
+                <label for="min">Minimaal</label>
+                <input type="text" class="input3" id="min-hum" name="three"/>
+
+                <label for="max">Maximaal</label>
+                <input type="text" class="input4" id="max-hum" name="four"/>
+            </div>
+        </form>
 
 
 
@@ -34,6 +53,10 @@ if(isset($_SESSION['loggedIn'])){
     <div id="control-panel-buttons"><div class="ui button green primary" id="adminSave" style="background-color: #c1d045;">Bewaren</div><div class="ui button" id="adminDiscard">Ongedaan maken</div></div>
 
     </div>
+
+    <script src="nouislider/js/jquery.nouislider.all.js" type="text/javascript"></script>
+    <script src="nouislider/js/jquery.liblink.js" type="text/javascript"></script>
+    <script src="nouislider/js/slider.js" type="text/javascript"></script>
 
     ';
 
