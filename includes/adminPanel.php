@@ -20,7 +20,7 @@ if(isset($_SESSION['loggedIn'])){
 
     </table>
 
-    <div id="control-panel-buttons"><div class="ui button green primary" id="adminSave">Bewaren</div><div class="ui button" id="adminDiscard">Ongedaan maken</div></div>
+    <div id="control-panel-buttons"><div class="ui button green primary" id="adminSave" style="background-color: #c1d045;">Bewaren</div><div class="ui button" id="adminDiscard">Ongedaan maken</div></div>
 
     </div>
 
@@ -33,7 +33,7 @@ if(isset($_SESSION['loggedIn'])){
 
     <div>Weet u zeker dat u de wijzigingen niet wilt opslaan?</div>
     <br>
-        <div class="ui button green primary" id="confirmYes">Ja</div>
+        <div class="ui button green primary" id="confirmYes" style="background-color: #c1d045;">Ja</div>
         <div class="ui button" id="confirmNo">Nee</div>
 
 

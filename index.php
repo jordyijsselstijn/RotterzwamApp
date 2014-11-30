@@ -78,7 +78,7 @@ include("includes/logout.php");
 
 <div class="ui segment" id="Container">
 
-    <div id="loader" class="ui inverted active dimmer"><div class="ui large text loader">Gegevens ophalen...</div></div>
+    <div id="loader" class="ui inverted active dimmer"><div id="loaderText" class="ui large text loader">Laden...</div></div>
 
 
 

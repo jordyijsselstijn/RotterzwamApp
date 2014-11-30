@@ -15,6 +15,14 @@ $(document).ready(function(){
         ;
     });
 
+
+    $("#logOut").on('click', function(){
+
+       $("#loaderText").html('Uitloggen...');
+
+
+    });
+
     var loginError= $("#error-modal p").html();
 
     if(loginError!=""){
@@ -27,7 +35,7 @@ $(document).ready(function(){
     $("#admin_panel").on('click', function(){
 
         setButtonLogic(this, "admin");
-        setLoader(1000);
+        setLoader(500);
         getBoundaryCall(getBoundaryCallback());
 
     });
@@ -53,21 +61,12 @@ $(document).ready(function(){
 
 
     //Transitions for the modules, so that it shows the captions.
-
-
-
-
-
-
     $("#adminSave").on('click', function(){
 
         updateBoundaryCall();
         console.log("werkt!");
 
-
     });
-
-
 
 });
 	
