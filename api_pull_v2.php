@@ -51,8 +51,6 @@ if(isset($min_temp) || isset($max_temp) || isset($min_hum) || isset($max_hum)) {
 
     }
 
-
-
 }
 
 

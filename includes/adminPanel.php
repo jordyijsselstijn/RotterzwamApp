@@ -72,12 +72,8 @@ if(isset($_SESSION['loggedIn'])){
     <br>
         <div class="ui button green primary" id="confirmYes" style="background-color: #c1d045;">Ja</div>
         <div class="ui button" id="confirmNo">Nee</div>
-
-
-
-
     </div>
-
+    <div class="ui small modal" id="login-modal"></div>
 
 
 

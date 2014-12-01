@@ -231,3 +231,34 @@ function updateBoundaryCallback(data)
 {
     console.log(data);
 }
+
+function getPowerStatus(callback)
+{
+    $.ajax(
+        {
+            dataType:"json",
+            data: {"powersurge":"true"},
+            url:"powersurge_api.php",
+            success:callback
+        }
+    );
+}
+
+function powerStatusCallback(data){
+
+    var powerStatusImage = $("#powerStatus");
+
+    console.log(data.powerstatus);
+
+    if(data.powerstatus == "true"){
+        //show green image
+        powerStatusImage.attr("src","images/Powerstatus_green.png");
+
+    } else if (data.powerstatus == "false"){
+        //show red image
+        powerStatusImage.attr("src","images/Powerstatus_red.png");
+    } else {
+        //show white (unknown or not connected)
+        powerStatusImage.attr("src","images/Powerstatus.png");
+    }
+}

@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+
+    //powersurge detection on front end
+    var tid = setTimeout(mycode, 5000);
+    function mycode() {
+        // do some stuff...
+        getPowerStatus(powerStatusCallback);
+        tid = setTimeout(mycode, 5000); // repeat myself
+    }
+
     //loading screen, buttonlogic and data loader for initial startup.
 
     setTimeout(function(){
