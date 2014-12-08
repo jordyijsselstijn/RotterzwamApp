@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+
     //powersurge detection on front end
     var tid = setTimeout(mycode, 5000);
     function mycode() {

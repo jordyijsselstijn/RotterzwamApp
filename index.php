@@ -38,7 +38,7 @@ include("includes/logout.php");
         <?php
         if(isset($_SESSION['loggedIn'])){
             echo'  Welkom '.$_SESSION['username'] .'  <form action="" method="POST" id="logOut">
-                        <button type="submit" name="logout" id="logout">Logout  <i class="sign out inverted icon"></i></button>
+                        <button type="submit" name="logout" id="logout">Logout <i class="sign out inverted icon"></i></button>
                         </form>';
         }else{
             echo'<img src="images/key-256.png" alt="admin-key" id="admin" width="25px">';
