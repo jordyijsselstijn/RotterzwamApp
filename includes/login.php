@@ -22,8 +22,8 @@ if(isset($_POST['login'])) //als de verzendknop is ingedrukt
     if(mysqli_num_rows($run)>0) // als er gelijke data wordt gevonden
     {
         $_SESSION['loggedIn'] = true; // ingelogd
+        $_SESSION['username'] = $_POST['username'];
 
-       echo "<script>window.open('index.php', '_self');</script>";
     }
     else //geen gelijke data wordt gevonden
     {
@@ -32,5 +32,3 @@ if(isset($_POST['login'])) //als de verzendknop is ingedrukt
 }
 
 ?>
-
-

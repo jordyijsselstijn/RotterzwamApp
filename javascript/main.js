@@ -16,6 +16,8 @@ $(document).ready(function(){
         loadDataRoom1();
 
     }, 1000) ;
+    
+    
 
     $("#admin").on('click', function(){
 
@@ -24,14 +26,27 @@ $(document).ready(function(){
             .modal('show')
         ;
     });
-
-
-    $("#logOut").on('click', function(){
-
-       $("#loaderText").html('Uitloggen...');
-
-
+    
+    $("#adminSave").on('click', function(){
+	    
+	    $("#saveSuccess")
+            .modal('show')
+        ;
+	    
     });
+    
+    $("#saveOkayBtn").on('click', function(){
+	    
+	    $("#saveSuccess")
+            .modal('hide')
+        ;
+	        loadDataRoom1();
+            setButtonLogic(this);
+            setLoader(1000);
+    });
+    
+    
+    
 
     var loginError= $("#error-modal p").html();
 
@@ -69,11 +84,9 @@ $(document).ready(function(){
 
     //Admin savebutton so it calls the update function in the functions.js file
     $("#adminSave").on('click', function(){
-
         updateBoundaryCall(updateBoundaryCallback);
-
-
     });
+
 
     $("#adminDiscard").on('click', function(){
 

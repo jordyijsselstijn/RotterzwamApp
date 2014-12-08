@@ -37,8 +37,8 @@ include("includes/logout.php");
 
         <?php
         if(isset($_SESSION['loggedIn'])){
-            echo'    <form action="" method="POST" id="logOut">
-                        <button type="submit" name="logout">Logout  <i class="sign out inverted icon"></i></button>
+            echo'  Welkom '.$_SESSION['username'] .'  <form action="" method="POST" id="logOut">
+                        <button type="submit" name="logout" id="logout">Logout  <i class="sign out inverted icon"></i></button>
                         </form>';
         }else{
             echo'<img src="images/key-256.png" alt="admin-key" id="admin" width="25px">';
@@ -48,7 +48,7 @@ include("includes/logout.php");
 
     </div>
     <div id="logo"><img src="images/logoheader7.png" alt="Rotterzwam Logo"></div>
-    <div id="power">Stroom status: <img class="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
+    <div id="power">Stroom status: <img class="powerStatus" id="powerStatus" src="images/Powerstatus.png" alt="powerstatus"></div>
 </header>
 
 
@@ -98,7 +98,7 @@ include("includes/logout.php");
                 <?php
                     include ('includes/adminButton.php');
                 ?>
-            </div>
+				</div>
                 <?php
                     include('includes/adminPanel.php');
 

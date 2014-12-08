@@ -74,9 +74,16 @@ if(isset($_SESSION['loggedIn'])){
         <div class="ui button" id="confirmNo">Nee</div>
     </div>
     <div class="ui small modal" id="login-modal"></div>
+    
+    
+    <div id="saveSuccess" class="ui basic modal">
 
-
-
+    <div>Uw wijzigingen zijn opgeslagen!</div>
+    <br>
+        <div class="ui button green primary" id="saveOkayBtn" style="background-color: #c1d045;">Okay</div>
+    </div>
+    <div class="ui small modal" id="login-modal"></div>
+    
 
     ';
 

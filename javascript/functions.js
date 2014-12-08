@@ -130,8 +130,6 @@ function loadDataRoom2(){
 }
 
 function setButtonLogic(element, panel){
-
-
     if(panel=="admin"){
 
         $(".item").removeClass("active");
@@ -151,6 +149,8 @@ function setButtonLogic(element, panel){
     }
 }
 
+
+
 function setLoader(timeOut){
 
 
@@ -161,6 +161,8 @@ function setLoader(timeOut){
 
 }
 
+
+
 function getAlerts(callback){
 
     $.ajax({
@@ -168,11 +170,12 @@ function getAlerts(callback){
         url:"includes/alertPull.php",
         success:callback
     })
-
 }
+
 
 function alertCallback (data){
     console.log(data);
+    $("#alerts tbody").empty();
     $.each(data, function (i, val)
     {
         $("#alerts tbody").append("<tr id="+val.id+"><td >"+val.alertType+"</td>" +
@@ -188,6 +191,8 @@ function alertCallback (data){
     });
 }
 
+
+
 function getBoundaryCall(callback)
 {
     $.ajax(
@@ -201,6 +206,7 @@ function getBoundaryCall(callback)
 }
 
 
+
 function getBoundaryCallback(data)
 {
     console.log(data);
@@ -209,10 +215,11 @@ function getBoundaryCallback(data)
 }
 
 
+//   Haalt de waardes van de boundaries uit de formtabels (naam van de id's kunnen worden aangepast naar de namen van de id's)
+
 function updateBoundaryCall(callback)
 {
-    /*Haalt de waardes van de boundaries uit de formtabels (naam van de id's kunnen worden aangepast naar de namen van de id's)*/
-    var minTemp = $(".input1").val();
+     var minTemp = $(".input1").val();
     var maxTemp = $(".input2").val();
     var minHum = $(".input3").val();
     var maxHum = $(".input4").val();
@@ -227,10 +234,15 @@ function updateBoundaryCall(callback)
     );
 }
 
+
+
+
 function updateBoundaryCallback(data)
 {
     console.log(data);
 }
+
+
 
 function getPowerStatus(callback)
 {
@@ -238,11 +250,12 @@ function getPowerStatus(callback)
         {
             dataType:"json",
             data: {"powersurge":"true"},
-            url:"powersurge_api.php",
+            url:"../DEV/powersurge_api.php",
             success:callback
         }
     );
 }
+
 
 function powerStatusCallback(data){
 

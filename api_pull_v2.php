@@ -62,7 +62,7 @@ if($boundary=="boundary"){
         if($unit=="Temperature"){
 
 
-            $result=$mysqli->query("SELECT * FROM boundary INNER JOIN Temperature ON boundary.boundary_id=Temperature.arduinoId_FK WHERE boundary_id=$room AND YEAR(timeDate) = YEAR(CURDATE()) AND MONTH(timeDate) = MONTH(CURDATE())");    //selecteer alles uit de opgegeven eenheid tabel
+            $result=$mysqli->query("SELECT * FROM boundary INNER JOIN Temperature ON boundary.boundary_id=Temperature.arduinoId_FK WHERE YEAR(timeDate) = 									YEAR(CURDATE()) AND MONTH(timeDate) = MONTH(CURDATE())");    //selecteer alles uit de opgegeven eenheid tabel
 
             $arr = array();                        //nieuwe array om waardes aan toe te voegen
 
@@ -74,7 +74,7 @@ if($boundary=="boundary"){
 
         }else if($unit=="Humidity"){
 
-            $result=$mysqli->query("SELECT * FROM boundary INNER JOIN Humidity ON boundary.boundary_id=Humidity.arduinoId_FK WHERE boundary_id=$room AND YEAR(timeDate) = YEAR(CURDATE()) AND MONTH(timeDate) = MONTH(CURDATE())");    //selecteer alles uit de opgegeven eenheid tabel
+            $result=$mysqli->query("SELECT * FROM boundary INNER JOIN Humidity ON boundary.boundary_id=Humidity.arduinoId_FK WHERE YEAR(timeDate) = YEAR(CURDATE()) AND 										MONTH(timeDate) = MONTH(CURDATE())");    //selecteer alles uit de opgegeven eenheid tabel
 
             $arr = array();                        //nieuwe array om waardes aan toe te voegen
 
